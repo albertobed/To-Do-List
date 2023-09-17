@@ -1,0 +1,290 @@
+:root{
+    --primary:#141E46;
+    --secondary:#BB2525;
+    --white:#E8E2E2;
+    --dark:#393053;
+    --bg-white:#F5F5F5;
+    --bg-dark:#18122B;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+
+html{
+    font-size:  62.5%;
+}
+
+body{
+    position: relative;
+    display: flex;
+    font-size: 1.6rem;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* checkboxs */
+.check{
+    margin: 0 2rem;
+}
+
+
+
+
+  .checkbox-wrapper .round {
+    position: relative;
+  }
+
+  .checkbox-wrapper .round label {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--bg-dark);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    display: block;
+  }
+
+  .checkbox-wrapper .round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 9px;
+    transform: rotate(-45deg);
+    width: 12px;
+    transition: all .3s ease-in-out;
+  }
+
+  .checkbox-wrapper .round input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+  }
+
+  .checkbox-wrapper .round input[type="checkbox"]:checked + label {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+  }
+
+  .checkbox-wrapper .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+
+
+/*error panel */
+
+.error-panel{
+    position: absolute;
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--dark);
+    height: 20vh;
+    width: 40vh;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    bottom: 2rem;
+    left: 2rem;
+    transform: scale(0);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+
+/* container */
+
+.container{
+    margin: auto;
+    height: 80vh;
+    width: 100vh;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+
+/* brand */
+.brand{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: var(--white);
+}
+
+.brand h1{
+    font-size: 4rem;
+}
+
+.theme{
+    font-size: 4rem;
+    cursor: pointer;
+    
+}
+
+/* input-task */
+
+.input-task{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+
+.input{
+    flex: 1;
+    width: 90%;
+    height: 100%;
+    font-size: 3rem;
+    outline: none;
+    padding-left: 2rem;
+    border: none;
+    color: var(--white);
+    border-radius: 1rem
+}
+
+.input::placeholder{
+    color: var(--white);
+    opacity: .5;
+}
+
+.fa-plus{
+    margin: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.fa-plus:active{
+    color: var(--dark);
+
+}
+
+/* task list */
+
+.task-list{
+    background-color: var(--dark);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding-bottom: 2rem; 
+    margin-bottom: 5rem;
+    
+}
+
+.task-list__items{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.empty-task{
+    text-align: center;
+    color: var(--white);
+    padding: 2rem;
+    font-size: 4rem;
+    opacity: .5;
+}
+
+.task-list__item{
+    display: flex;
+    padding: 2rem;
+    color: var(--white);
+    font-size: 2rem;
+    align-items: center;
+    border-bottom: 2px solid var(--bg-dark);
+    width: 100%;
+}
+
+.task-list__item h2{
+    /* display: flex;
+    flex-wrap: wrap; */
+    flex: 80%;
+}
+
+
+.fa-x{
+    align-self: center;
+    color: var(--bg-white);
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 3rem;
+    opacity: .5;
+}
+
+.fa-x:hover{
+    color: darkred;
+    opacity: 1;
+}
+
+/* toggle classes */
+
+.hidden{
+    display: none !important ; 
+}
+
+.overline{
+    text-decoration: line-through;
+    opacity: .4;
+}
+
+.toSun-bg{
+    background-color: var(--bg-white);
+}
+
+.toMoon-bg{
+    background-color: var(--bg-dark);
+}
+
+.toSun-bg2{
+    background-color: var(--white);
+}
+
+.toMoon-bg2{
+    background-color: var(--dark);
+}
+
+.scale-to-one{
+    transform: scale(1);
+}
+
+.opacity-to-zero{
+    opacity: 0;
+}
+
+
+
+/* animete */
+
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}

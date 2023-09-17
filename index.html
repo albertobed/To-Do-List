@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body class="toMoon-bg bg">
+    <div class="error-panel">
+        <h1>Task names must be between 1-30 letters</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <header class="brand">
+                <h1>TO DO LIST</h1>
+                <div class="theme">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+            </header>
+            <div class="input-task toMoon-bg2">
+                <input class="input toMoon-bg2" type="text" placeholder="Create New Task">
+                <i class="fa-solid fa-plus fa-2x"></i>
+            </div>
+            <div class="task-list toMoon-bg2">
+                <ul class="task-list__items">
+                    <h2 class="empty-task">Add Task</h2>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
