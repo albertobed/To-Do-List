@@ -9,6 +9,10 @@ const themeBtn = document.querySelector(".fa-moon")
 
 const errorPanel = document.querySelector(".error-panel")
 
+const mediaQueryPhones = window.matchMedia("(min-width: 320px) and (max-width: 1200px)")
+
+const mediaQueryPc = window.matchMedia("(min-width: 769px) and (max-width: 1200px)")
+
 let taskText;
 let counter = 0;
 const maxWidth = 30;
@@ -40,6 +44,25 @@ themeBtn.addEventListener("click",() => {
 
 const addTask = () =>{
     if(taskValue.value !== ""){
+        if (mediaQueryPhones.matches){
+            if(taskValue.value.length > maxWidth){
+                setTimeout(() =>{
+                    errorPanel.classList.add("translate-to-bottom")       
+                }, 100);
+                setTimeout(() => {
+                    errorPanel.classList.remove("translate-to-bottom")
+                }, 2500)
+            }
+        }else if(mediaQueryPc.matches){
+            if(taskValue.value.length > maxWidth){
+                setTimeout(() =>{
+                    errorPanel.classList.add("translate-to-bottom")       
+                }, 100);
+                setTimeout(() => {
+                    errorPanel.classList.remove("translate-to-bottom")
+                }, 2500)
+            }
+        }
         if(taskValue.value.length > maxWidth){
             setTimeout(() =>{
                 errorPanel.classList.add("scale-to-one")        
@@ -108,4 +131,6 @@ document.addEventListener("keydown", (event) => {
         addTask();
     }
 })
+
+
 
